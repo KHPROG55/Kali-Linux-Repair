@@ -2,6 +2,7 @@ import os
 def Edit_Sources_File():
 	while True:
 		os.system("clear")
+		banner()
 		print("""
 	1) Automatic
 	2) Manual
@@ -30,6 +31,7 @@ def Edit_Sources_File():
 def Updating_System():
 	while True:
 		os.system("clear")
+		banner()
 		print("""
 	1) Update only
 	2) Full Update (With upgrade)
@@ -50,11 +52,15 @@ def Updating_System():
 		else:
 			continue
 def Fix_PGP_Error():
+	os.system("clear")
+	banner()
 	key = input("Enter key here : ")
 	os.system("apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys " + key)
 	print("Done, Thanks for using this tool, Enjoy :)")
 	exit()
 def VMware_Tools():
+	os.system("clear")
+	banner()
 	os.system("apt -y install open-vm-tools-desktop fuse")
 	Ask_Rebooting = input("Done, You need to reboot your system, reboot now? [y/n] ")
 	if Ask_Rebooting == "y" or Ask_Rebooting == "yes" or Ask_Rebooting == "Y" or Ask_Rebooting == "Yes":
@@ -63,6 +69,8 @@ def VMware_Tools():
 		print("Done, Thanks for using this tool, Enjoy :)")
 		exit()
 def Virtualbox_Tools():
+	os.system("clear")
+	banner()
 	os.system("apt-get install -y virtualbox-guest-x11")
 	Ask_Rebooting = input("Done, You need to reboot your system, reboot now? [y/n] ")
 	if Ask_Rebooting == "y" or Ask_Rebooting == "yes" or Ask_Rebooting == "Y" or Ask_Rebooting == "Yes":
@@ -73,6 +81,7 @@ def Virtualbox_Tools():
 def main():
 	while True:
 		os.system("clear")
+		banner()
 		print("""
 	1) Edit sources.list
 	2) Updating & Upgrading System
@@ -93,6 +102,35 @@ def main():
 			Virtualbox_Tools()
 		else:
 			continue
+def banner():
+	print("""
+                          (                                
+                           @  @                            
+                            @@ @                           
+                  @%,*@@@@@@ *@%@@                         
+               ,@@@@@@@@@@@@@@@@@@@@                       
+               @@@@@@@.   .@@@@@@@@@@@                     
+              @@@@@            @@@@@@@@@                   
+             &@@@@               @@@@@@@@                  
+              @@@@                 @@@@@@@@                
+              @@@@%                  @@@@@@                
+               &@@@@                    @@@@@              
+                @ @@@@                   *@@@#             
+                    (@@@@&                @@               
+                        #@@@@@                             
+                             @@@@                          
+                                @@@                        
+                                   @                       
+                                    @                      
+                                    *                      
+██╗  ██╗ █████╗ ██╗     ██╗    ██████╗ ███████╗██████╗  █████╗ ██╗██████╗ 
+██║ ██╔╝██╔══██╗██║     ██║    ██╔══██╗██╔════╝██╔══██╗██╔══██╗██║██╔══██╗
+█████╔╝ ███████║██║     ██║    ██████╔╝█████╗  ██████╔╝███████║██║██████╔╝
+██╔═██╗ ██╔══██║██║     ██║    ██╔══██╗██╔══╝  ██╔═══╝ ██╔══██║██║██╔══██╗
+██║  ██╗██║  ██║███████╗██║    ██║  ██║███████╗██║     ██║  ██║██║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
+~ simple tool for repair kali linux of some problems
+		""")
 if __name__ == "__main__":
 	try:
 		main()
