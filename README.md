@@ -4,3 +4,10 @@
 # Requirements
 - Python3.x 
 - Kali Linux
+# Installation 
+- Open terminal and write : 
+```
+git clone https://github.com/KHPROG55/Kali-Linux-Repair.git
+cd Kali-Linux-Repair
+pytyon3 kali_linux_repair.py
+```
