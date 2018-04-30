@@ -8,6 +8,12 @@
 - Open terminal and write : 
 ```
 git clone https://github.com/KHPROG55/Kali-Linux-Repair.git
+```
+- Atfer download write : 
+```
 cd Kali-Linux-Repair
-pytyon3 kali_linux_repair.py
+```
+- And : 
+```
+python3 kali_linux_repair.py
 ```
